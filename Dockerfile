@@ -1,10 +1,7 @@
 FROM caddy:builder AS builder
 
 RUN xcaddy build \
-    --with github.com/caddy-dns/gandi
-
-RUN xcaddy build \
-    --with github.com/mholt/caddy-l4
+    --with https://github.com/caddy-dns/cloudflare
 
 FROM caddy:latest
 
