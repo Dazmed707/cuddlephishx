@@ -1,4 +1,4 @@
-## CuddlePhish
+## CuddlePhishX
 
 **Note about this fork:**
 Some minor changes have been made to decrease the amount of IOCs. Please edit the config.json file to your specifications. Also make sure to read [this.](https://specterops.io/blog/2023/11/07/phishing-with-dynamite/)
@@ -16,7 +16,7 @@ This example setup utilizes Caddy to handle TLS, SNI, and add a couple of custom
 
 Install Docker, Node, XVFB, and some other dependencies:
 ```
-git clone https://github.com/fkasler/cuddlephish
+git clone https://github.com/Dazmed707/cuddlephish
 cd cuddlephish
 sudo bash install_deps.sh
 ```
@@ -30,7 +30,7 @@ sudo docker build -t caddy .
 Now mod the Caddyfile to swap your domain and Gandi (or other registrar) API key, and start Caddy. I recommend starting this in a screen or tmux window so that you can run the Node server in another window in a moment:
 
 ```
-sudo docker run -p 80:80 -p 443:443 -p 2019:2019 -v $PWD/Caddyfile:/etc/caddy/Caddyfile --network=host caddy:latest
+sudo docker run -p 80:80 -p 443:443 -p 2019:2019 -v $PWD/Caddyfile:/root/cuddlephishx/Caddyfile --network=host caddy:latest
 ```
 With Caddy fielding traffic for us on 80 and 443, we can finally run the tool!
 
