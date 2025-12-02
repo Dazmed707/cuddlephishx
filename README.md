@@ -16,7 +16,7 @@ This example setup utilizes Caddy to handle TLS, SNI, and add a couple of custom
 
 Install Docker, Node, XVFB, and some other dependencies:
 ```
-git clone https://github.com/Dazmed707/cuddlephish
+git clone https://github.com/Dazmed707/cuddlephishx
 cd cuddlephish
 sudo bash install_deps.sh
 ```
